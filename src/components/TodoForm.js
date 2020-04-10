@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 const TodoForm = (props) => {
-    const [itemTask, setItemTask] = useState({
+    const [task, setTask] = useState({
         itemTask: "",
     });
 
     const handleChanges = (e) => {
-        setItemTask({ ...itemTask, itemTask: e.target.value });
+        setTask({ itemTask: e.target.value });
     };
 
     const handleAddItem = (e) => {
         e.preventDefault();
-        props.addItem(itemTask);
-        setItemTask({ itemTask: "" });
+        props.addItem(task.itemTask);
+        setTask({ itemTask: "" });
     };
 
     return (
@@ -20,7 +20,7 @@ const TodoForm = (props) => {
             <input
                 type="text"
                 name="item"
-                value={itemTask}
+                value={task.itemTask}
                 onChange={handleChanges}
             />
             <button>Add</button>

@@ -44,11 +44,14 @@ function App() {
     };
 
     const addItem = (itemTask) => {
-        setTodoItems(todoItems, {
-            task: itemTask,
-            completed: false,
-            id: Math.random(),
-        });
+        setTodoItems([
+            ...todoItems,
+            {
+                task: itemTask,
+                id: Math.random(),
+                completed: false,
+            },
+        ]);
     };
 
     const clearCompleted = () => {
