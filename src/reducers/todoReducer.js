@@ -13,7 +13,7 @@ export const initialTodoState = {
         {
             task: "Cook Dinner",
             id: 1528817084343,
-            completed: true,
+            completed: false,
         },
         {
             task: "Do Laundry",

@@ -23,6 +23,7 @@ const TodoList = () => {
                     onClick={(e) => {
                         e.preventDefault();
                         dispatch({ type: "ADD_TODO", payload: task });
+                        setTask("");
                     }}
                 >
                     Add
